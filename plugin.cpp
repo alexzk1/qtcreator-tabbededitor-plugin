@@ -67,22 +67,25 @@ void TabbedEditorPlugin::updateStyleToBaseColor()
     QString selectedTabBorderColorQss;
     QString shadowColorQss;
 
-    /*if(theme->widgetStyle() == Utils::Theme::StyleDefault) {
+    //if(theme->widgetStyle() == Utils::Theme::StyleDefault)
+    {
         baseColorQss = getQssStringFromColor(Utils::StyleHelper::baseColor().lighter(130));
         borderColorQss = getQssStringFromColor(Utils::StyleHelper::borderColor());
         highlightColorQss = getQssStringFromColor(Utils::StyleHelper::baseColor());
         selectedTabBorderColorQss
                 = getQssStringFromColor(Utils::StyleHelper::highlightColor().lighter());
         shadowColorQss = getQssStringFromColor(Utils::StyleHelper::shadowColor());
-    } else*/ { // Flat widget style
-        baseColorQss
-                = getQssStringFromColor(theme->color(Utils::Theme::BackgroundColorHover));
-        borderColorQss = getQssStringFromColor(theme->color(Utils::Theme::BackgroundColorHover));
-        highlightColorQss = getQssStringFromColor(theme->color(Utils::Theme::BackgroundColorDark));
-        selectedTabBorderColorQss
-                = getQssStringFromColor(theme->color(Utils::Theme::BackgroundColorDark));
-        shadowColorQss = getQssStringFromColor(theme->color(Utils::Theme::BackgroundColorNormal));
     }
+//    else
+//    { // Flat widget style
+//        baseColorQss
+//                = getQssStringFromColor(theme->color(Utils::Theme::BackgroundColorHover));
+//        borderColorQss = getQssStringFromColor(theme->color(Utils::Theme::BackgroundColorHover));
+//        highlightColorQss = getQssStringFromColor(theme->color(Utils::Theme::BackgroundColorDark));
+//        selectedTabBorderColorQss
+//                = getQssStringFromColor(theme->color(Utils::Theme::BackgroundColorDark));
+//        shadowColorQss = getQssStringFromColor(theme->color(Utils::Theme::BackgroundColorNormal));
+//    }
 
     QString stylesheetPattern = getStylesheetPatternFromFile(QStringLiteral(":/styles/default.qss"));
 
